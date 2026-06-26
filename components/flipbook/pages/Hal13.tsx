@@ -38,7 +38,7 @@ const Hal13 = forwardRef<HTMLDivElement>((_, ref) =>
       )}
     </div>
 
-    <div className="mt-4 @sm:mt-5 rounded-xl border border-charcoal/10 overflow-hidden">
+    <div className="mt-4 @sm:mt-5 rounded-xl border border-charcoal/10 px-4 @sm:px-6 py-4 @sm:py-5 shrink-0">
       <p className="font-body text-[10px] tracking-widest text-charcoal/40 uppercase text-center pt-3">
         Kenapa PLTA Lebih Bertenaga dari Turbin Angin
       </p>

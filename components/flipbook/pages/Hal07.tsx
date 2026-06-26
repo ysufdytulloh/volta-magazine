@@ -28,7 +28,7 @@ const Hal07 = forwardRef<HTMLDivElement>((_, ref) =>
       seberapa cepat alam bisa menggantikannya.
     </p>
 
-    <div className="relative grid grid-cols-2 rounded-xl overflow-hidden border border-charcoal/10">
+    <div className="relative grid grid-cols-2 rounded-xl overflow-hidden border border-charcoal/10 shrink-0">
       <div className="bg-amber/15 px-4 @sm:px-6 py-5 @sm:py-7">
         <p className="font-display text-base @sm:text-lg text-charcoal mb-1">
           Terbarukan

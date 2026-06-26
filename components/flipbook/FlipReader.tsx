@@ -56,12 +56,13 @@ const BackCoverPage = forwardRef<HTMLDivElement>((_, ref) => (
 BackCoverPage.displayName = "BackCoverPage";
 
 export default function FlipReader() {
-  const [currentPage, setCurrentPage] = useState(() => {
+  const [initialPage] = useState(() => {
     if (typeof window === "undefined") return 0;
     const saved = window.localStorage.getItem(STORAGE_KEY);
     const parsed = saved ? parseInt(saved, 10) : 0;
     return Number.isFinite(parsed) && parsed >= 0 && parsed < TOTAL_PAGES ? parsed : 0;
   });
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const [orientation, setOrientation] = useState<"portrait" | "landscape">("landscape");
 
   const currentPageRef = useRef(currentPage);
@@ -107,8 +108,9 @@ export default function FlipReader() {
           showCover={true}
           usePortrait={true}
           mobileScrollSupport={true}
-          startPage={currentPage}
+          startPage={initialPage}
           maxShadowOpacity={0.35}
+          flippingTime={600}
           className="mx-auto"
           onFlip={handleFlip}
           onChangeOrientation={(e: { data: "portrait" | "landscape" }) =>
