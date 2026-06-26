@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-cream: #F7F3EC;
-  --color-charcoal: #231F1C;
-  --color-koral: #C23B33;
-  --color-amber: #C99A4A;
-  --color-biru: #4C6FE0;
-  --color-blush: #FBEAEA;
-  --color-navy: #16191E;
+  --color-cream: #f7f3ec;
+  --color-charcoal: #231f1c;
+  --color-koral: #c23b33;
+  --color-amber: #c99a4a;
+  --color-biru: #4c6fe0;
+  --color-blush: #fbeaea;
+  --color-navy: #16191e;
 
   --font-display: var(--font-playfair);
   --font-body: var(--font-jakarta);
@@ -17,4 +17,11 @@ body {
   background: var(--color-cream);
   color: var(--color-charcoal);
   font-family: var(--font-body);
+}
+
+.stf__item[class~="--left"] {
+  box-shadow: inset -24px 0 32px -18px rgba(0, 0, 0, 0.65);
+}
+.stf__item[class~="--right"] {
+  box-shadow: inset 24px 0 32px -18px rgba(0, 0, 0, 0.65);
 }
