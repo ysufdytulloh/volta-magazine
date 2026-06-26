@@ -1,5 +1,6 @@
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -13,8 +14,10 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta"
 });
 
-export const metadata = {
-  title: "Volta — Energi Masa Kini"
+export const metadata: Metadata = {
+  metadataBase: new URL("https://volta-emagazine.vercel.app"),
+  title: "Volta — Energi Masa Kini",
+  description: "E-Magazine interaktif tentang Energi & Perubahannya"
 };
 
 export default function RootLayout({
