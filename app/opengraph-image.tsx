@@ -1,10 +1,11 @@
 import { ImageResponse } from "next/og";
+import sharp from "sharp";
 import fs from "node:fs/promises";
 import path from "node:path";
 
 export const runtime = "nodejs";
 export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+export const contentType = "image/jpeg";
 
 async function loadGoogleFont(font: string, weight: number, text: string) {
   const url = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(
@@ -32,7 +33,7 @@ export default async function OpengraphImage() {
   ]);
   const base64Image = `data:image/jpeg;base64,${imageData.toString("base64")}`;
 
-  return new ImageResponse(
+  const imageResponse = new ImageResponse(
     (
       <div
         style={{
@@ -78,7 +79,7 @@ export default async function OpengraphImage() {
             style={{
               fontSize: 28,
               color: "#FBEAEA",
-              fontFamily: "Plus Jakarta Sans",
+              fontFamily: "Playfair Display",
               marginBottom: 8
             }}
           >
@@ -126,4 +127,14 @@ export default async function OpengraphImage() {
       ]
     }
   );
+
+  const pngBuffer = Buffer.from(await imageResponse.arrayBuffer());
+  const jpegBuffer = await sharp(pngBuffer).jpeg({ quality: 80 }).toBuffer();
+
+  return new Response(new Uint8Array(jpegBuffer), {
+    headers: {
+      "Content-Type": "image/jpeg",
+      "Cache-Control": "public, immutable, no-transform, max-age=31536000"
+    }
+  });
 }
