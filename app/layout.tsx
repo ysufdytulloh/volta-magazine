@@ -17,7 +17,9 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://volta-emagazine.vercel.app"),
   title: "Volta — Energi Masa Kini",
-  description: "E-Magazine interaktif tentang Energi & Perubahannya"
+  description:
+    "E-Magazine interaktif tentang Energi & Perubahannya — jelajahi 30 halaman dengan animasi flip seperti membaca buku sungguhan.",
+  authors: [{ name: "Salsabila Laily Amalina" }],
 };
 
 export default function RootLayout({
