@@ -39,7 +39,7 @@ export default function Home() {
                 Program Studi
               </p>
               <p className="font-display text-sm text-charcoal  mt-1">
-                — Universitas —
+                S2 Pendidikan Fisika
               </p>
             </div>
             <div>
