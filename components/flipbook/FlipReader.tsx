@@ -34,9 +34,9 @@ import Hal27 from "./pages/Hal27";
 import Hal28 from "./pages/Hal28";
 import Hal29 from "./pages/Hal29";
 
-const HTMLFlipBook = (dynamic(() => import("react-pageflip"), {
+const HTMLFlipBook = dynamic(() => import("react-pageflip"), {
   ssr: false,
-}) as unknown) as React.ComponentType<Record<string, unknown>>;
+}) as unknown as React.ComponentType<Record<string, unknown>>;
 
 const TOTAL_PAGES = 30;
 const STORAGE_KEY = "volta-last-page";
@@ -60,10 +60,14 @@ export default function FlipReader() {
     if (typeof window === "undefined") return 0;
     const saved = window.localStorage.getItem(STORAGE_KEY);
     const parsed = saved ? parseInt(saved, 10) : 0;
-    return Number.isFinite(parsed) && parsed >= 0 && parsed < TOTAL_PAGES ? parsed : 0;
+    return Number.isFinite(parsed) && parsed >= 0 && parsed < TOTAL_PAGES
+      ? parsed
+      : 0;
   });
   const [currentPage, setCurrentPage] = useState(initialPage);
-  const [orientation, setOrientation] = useState<"portrait" | "landscape">("landscape");
+  const [orientation, setOrientation] = useState<"portrait" | "landscape">(
+    "landscape",
+  );
 
   const currentPageRef = useRef(currentPage);
   useEffect(() => {
@@ -93,7 +97,9 @@ export default function FlipReader() {
   return (
     <>
       <div className="fixed top-4 left-4 z-50">
-        <p className="font-body text-xs @sm:text-sm text-cream/80 tabular-nums">{counterText}</p>
+        <p className="font-body text-xs @sm:text-sm text-cream/80 tabular-nums">
+          {counterText}
+        </p>
       </div>
 
       <div className="w-full max-w-6xl mx-auto">
@@ -134,17 +140,17 @@ export default function FlipReader() {
           <Hal15 />
           <Hal16 />
           <Hal17 />
-          <Hal18 />
+          {/* <Hal18 />
           <Hal19 />
           <Hal20 />
           <Hal21 />
           <Hal22 />
           <Hal23 />
-          <Hal24 />
+          <Hal24 /> */}
           <Hal25 />
           <Hal26 />
-          <Hal27 />
-          <Hal28 />
+          {/* <Hal27 />
+          <Hal28 /> */}
           <Hal29 />
           <BackCoverPage />
         </HTMLFlipBook>

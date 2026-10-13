@@ -21,10 +21,10 @@ export default function Home() {
             Energi &amp; Perubahan<span className="text-biru">nya</span>
           </h1>
           <div className="w-14 h-px bg-charcoal/20 my-5" />
-          <p className="font-body text-charcoal/70 text-base sm:text-lg leading-relaxed max-w-md">
+          {/* <p className="font-body text-charcoal/70 text-base sm:text-lg leading-relaxed max-w-md">
             Dari energi kinetik sampai panel surya — perjalanan visual memahami
             bagaimana energi bekerja, berubah, dan menopang kehidupan modern.
-          </p>
+          </p> */}
           <div className="flex gap-8 mt-8">
             <div>
               <p className="font-body text-[10px] tracking-wide text-charcoal/50 uppercase">

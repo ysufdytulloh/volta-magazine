@@ -10,27 +10,27 @@ const transformations = [
     from: Zap,
     to: Flame,
     label: "Listrik → Panas",
-    example: "Setrika, rice cooker, kompor listrik"
+    example: "Setrika, rice cooker, kompor listrik",
   },
   { from: Zap, to: Lightbulb, label: "Listrik → Cahaya", example: "Lampu" },
   {
     from: Zap,
     to: Battery,
     label: "Listrik → Kimia",
-    example: "Pengisian aki & baterai HP"
+    example: "Pengisian aki & baterai HP",
   },
   {
     from: Zap,
     to: Wind,
     label: "Listrik → Gerak",
-    example: "Mesin cuci, kipas angin, turbin"
+    example: "Mesin cuci, kipas angin, turbin",
   },
   { from: Sun, to: Zap, label: "Cahaya → Listrik", example: "Sel surya" },
   { from: Wind, to: Zap, label: "Gerak → Listrik", example: "Dinamo, PLTA" },
-  { from: Battery, to: Zap, label: "Kimia → Listrik", example: "Baterai, aki" }
+  { from: Battery, to: Zap, label: "Kimia → Listrik", example: "Baterai, aki" },
 ];
 
-const Hal05 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal05 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={5}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="w-8 h-px bg-koral" />
@@ -39,7 +39,7 @@ const Hal05 = forwardRef<HTMLDivElement>((_, ref) =>
       </span>
     </div>
     <h2 className="font-display text-2xl @sm:text-4xl text-charcoal leading-tight mb-3 @sm:mb-4">
-      7 Wajah Perubahan Energi
+      7 Contoh Perubahan Energi
     </h2>
     <div className="h-px w-full mb-4 @sm:mb-6 bg-linear-to-r from-koral to-transparent shrink-0" />
 
@@ -52,7 +52,7 @@ const Hal05 = forwardRef<HTMLDivElement>((_, ref) =>
     </BodyText>
 
     <div className="grid grid-cols-1 @sm:grid-cols-2 gap-2.5 @sm:gap-3 mt-4 @sm:mt-5">
-      {transformations.map(({ from: From, to: To, label, example }, i) =>
+      {transformations.map(({ from: From, to: To, label, example }, i) => (
         <div
           key={i}
           className="flex items-center gap-3 bg-charcoal/[0.03] border border-charcoal/10 rounded-lg px-3 py-2.5"
@@ -71,7 +71,7 @@ const Hal05 = forwardRef<HTMLDivElement>((_, ref) =>
             </p>
           </div>
         </div>
-      )}
+      ))}
     </div>
 
     <div className="mt-1.5 @sm:mt-2 space-y-3 @sm:space-y-4">
@@ -86,7 +86,7 @@ const Hal05 = forwardRef<HTMLDivElement>((_, ref) =>
       </NoteBox>
     </div>
   </PageShell>
-);
+));
 Hal05.displayName = "Hal05";
 
 export default Hal05;
