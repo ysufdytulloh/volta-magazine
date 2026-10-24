@@ -5,7 +5,7 @@ import RadialStat from "../RadialStat";
 import NoteBox from "../NoteBox";
 import PageImage from "../PageImage";
 
-const Hal18 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal18 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={18}>
     <p className="font-body text-xs tracking-widest text-navy/60 uppercase mb-3 @sm:mb-4">
       D.2 Sumber Energi Tidak Dapat Diperbaharui — 03
@@ -44,7 +44,7 @@ const Hal18 = forwardRef<HTMLDivElement>((_, ref) =>
       </NoteBox>
     </div>
   </PageShell>
-);
+));
 Hal18.displayName = "Hal18";
 
 export default Hal18;

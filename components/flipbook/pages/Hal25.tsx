@@ -7,12 +7,12 @@ import { CloudOff, Factory, Sun } from "lucide-react";
 const manfaat = [
   {
     icon: CloudOff,
-    label: "Energi terbarukan membantu mengurangi emisi gas rumah kaca"
-  }
+    label: "Energi terbarukan membantu mengurangi emisi gas rumah kaca",
+  },
 ];
 
-const Hal25 = forwardRef<HTMLDivElement>((_, ref) =>
-  <PageShell ref={ref} pageNumber={25}>
+const Hal18 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={18}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="w-8 h-px bg-amber" />
       <span className="font-body text-xs tracking-widest text-amber uppercase">
@@ -40,14 +40,14 @@ const Hal25 = forwardRef<HTMLDivElement>((_, ref) =>
       <p className="font-body text-[10px] tracking-widest text-charcoal/40 uppercase mb-2">
         Manfaat 1
       </p>
-      {manfaat.map(({ icon: Icon, label }, i) =>
+      {manfaat.map(({ icon: Icon, label }, i) => (
         <div key={i} className="flex items-center gap-2.5">
           <Icon size={15} className="text-amber shrink-0" strokeWidth={1.75} />
           <span className="font-body text-xs @sm:text-sm text-charcoal/80">
             {label}
           </span>
         </div>
-      )}
+      ))}
     </div>
 
     <div className="mt-4 @sm:mt-5 rounded-xl border border-charcoal/10 px-4 @sm:px-6 py-4 @sm:py-5">
@@ -86,7 +86,7 @@ const Hal25 = forwardRef<HTMLDivElement>((_, ref) =>
       </NoteBox>
     </div>
   </PageShell>
-);
-Hal25.displayName = "Hal25";
+));
+Hal18.displayName = "Hal18";
 
-export default Hal25;
+export default Hal18;
