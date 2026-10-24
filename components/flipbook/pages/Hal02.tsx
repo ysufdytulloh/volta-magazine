@@ -4,7 +4,7 @@ import PullQuote from "../PullQuote";
 import BodyText from "../BodyText";
 import PageImage from "../PageImage";
 
-const Hal02 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal02 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={2}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="w-8 h-px bg-koral" />
@@ -45,7 +45,7 @@ const Hal02 = forwardRef<HTMLDivElement>((_, ref) =>
       />
     </div>
   </PageShell>
-);
+));
 Hal02.displayName = "Hal02";
 
 export default Hal02;
