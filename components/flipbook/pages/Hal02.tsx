@@ -18,15 +18,15 @@ const Hal02 = forwardRef<HTMLDivElement>((_, ref) => (
     <div className="h-px w-full mb-4 @sm:mb-6 bg-gradient-to-r from-koral to-transparent" />
 
     <div className="space-y-3 @sm:space-y-5">
-      <PullQuote>
+      {/* <PullQuote>
         Tangan kita bisa berbohong soal suhu, tapi tidak soal usaha — di situlah
         energi bersembunyi.
-      </PullQuote>
+      </PullQuote> */}
       <BodyText dropCap>
         Setiap kali kamu berlari, menyalakan lampu, atau sekadar mengangkat buku
         dari atas meja, ada satu hal yang sedang bekerja diam-diam: energi.
         Dalam fisika, energi didefinisikan sebagai kemampuan untuk melakukan
-        usaha. Yang menarik, energi punya sifat istimewa — ia tidak pernah
+        usaha. Yang menarik, energi punya sifat istimewa. ia tidak pernah
         benar-benar diciptakan, juga tidak pernah dimusnahkan. Energi hanya
         berpindah bentuk, dari satu wujud ke wujud lain, mengikuti aktivitas
         yang sedang berlangsung di sekitarnya. Bahkan saat kamu sedang duduk

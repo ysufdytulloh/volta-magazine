@@ -157,8 +157,8 @@ const summaries = [
   },
 ];
 
-const Hal28 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={28}>
+const Hal26 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={26}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="w-8 h-px bg-koral" />
       <span className="font-body text-xs tracking-widest text-koral uppercase">
@@ -217,5 +217,5 @@ const Hal28 = forwardRef<HTMLDivElement>((_, ref) => (
   </PageShell>
 ));
 
-Hal28.displayName = "Hal28";
-export default Hal28;
+Hal26.displayName = "Hal26";
+export default Hal26;

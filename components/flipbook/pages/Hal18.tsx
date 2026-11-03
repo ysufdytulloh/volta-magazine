@@ -11,8 +11,8 @@ const manfaat = [
   },
 ];
 
-const Hal18 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={18}>
+const Hal16 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={16}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="w-8 h-px bg-amber" />
       <span className="font-body text-xs tracking-widest text-amber uppercase">
@@ -87,6 +87,6 @@ const Hal18 = forwardRef<HTMLDivElement>((_, ref) => (
     </div>
   </PageShell>
 ));
-Hal18.displayName = "Hal18";
+Hal16.displayName = "Hal16";
 
-export default Hal18;
+export default Hal16;

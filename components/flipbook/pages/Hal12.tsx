@@ -4,7 +4,7 @@ import BodyText from "../BodyText";
 import DamDiagram from "../DamDiagram";
 import NoteBox from "../NoteBox";
 
-const Hal12 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal12 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={12}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="font-body text-xs tracking-widest text-amber uppercase">
@@ -39,11 +39,11 @@ const Hal12 = forwardRef<HTMLDivElement>((_, ref) =>
       <NoteBox label="Koneksi Konsep" tone="amber">
         Air yang mengalir membawa energi kinetik. Begitu memutar turbin, energi
         itu berubah jadi energi mekanik, lalu generator mengonversinya jadi
-        listrik — rangkaian perubahan energi inilah yang dinamai hidroelektrik.
+        listrik rangkaian perubahan energi inilah yang dinamai hidroelektrik.
       </NoteBox>
     </div>
   </PageShell>
-);
+));
 Hal12.displayName = "Hal12";
 
 export default Hal12;

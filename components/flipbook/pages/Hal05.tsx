@@ -44,11 +44,11 @@ const Hal05 = forwardRef<HTMLDivElement>((_, ref) => (
     <div className="h-px w-full mb-4 @sm:mb-6 bg-linear-to-r from-koral to-transparent shrink-0" />
 
     <BodyText>
-      Perubahan energi bukan cuma teori di buku pelajaran — ia terjadi di
-      sekitar kita hampir setiap saat, dari dapur sampai kamar tidur. Memahami
-      fenomena ini sejalan dengan cara sains bekerja: mengamati kejadian
-      sehari-hari, lalu memanfaatkannya untuk keperluan manusia. Berikut tujuh
-      transformasi paling umum yang mungkin sudah sering kamu temui tanpa sadar.
+      Perubahan energi bukan cuma teori di buku pelajaran, ia terjadi di sekitar
+      kita hampir setiap saat, dari dapur sampai kamar tidur. Memahami fenomena
+      ini sejalan dengan cara sains bekerja: mengamati kejadian sehari-hari,
+      lalu memanfaatkannya untuk keperluan manusia. Berikut tujuh transformasi
+      paling umum yang mungkin sudah sering kamu temui tanpa sadar.
     </BodyText>
 
     <div className="grid grid-cols-1 @sm:grid-cols-2 gap-2.5 @sm:gap-3 mt-4 @sm:mt-5">
@@ -76,13 +76,13 @@ const Hal05 = forwardRef<HTMLDivElement>((_, ref) => (
 
     <div className="mt-1.5 @sm:mt-2 space-y-3 @sm:space-y-4">
       <PullQuote>
-        Apapun bentuk yang ditempuhnya, energi tidak pernah benar-benar hilang —
+        Apapun bentuk yang ditempuhnya, energi tidak pernah benar-benar hilang.
         ia cuma pindah rumah, dari satu wujud ke wujud lain.
       </PullQuote>
       <NoteBox label="Catatan">
         Ingat EM = EP + EK dari halaman sebelumnya? Prinsip yang sama berlaku di
-        sini — berapa pun banyaknya energi berpindah wujud, jumlah totalnya
-        tetap terjaga, sesuai hukum kekekalan energi.
+        sini, berapa pun banyaknya energi berpindah wujud, jumlah totalnya tetap
+        terjaga, sesuai hukum kekekalan energi.
       </NoteBox>
     </div>
   </PageShell>

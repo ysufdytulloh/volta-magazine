@@ -13,8 +13,8 @@ const regions = [
   { place: "Arus laut kuat", energy: "Energi Laut", code: "06" },
 ];
 
-const Hal23 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={23}>
+const Hal21 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={21}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="w-8 h-px bg-koral" />
       <span className="font-body text-xs tracking-widest text-koral uppercase">
@@ -76,5 +76,5 @@ const Hal23 = forwardRef<HTMLDivElement>((_, ref) => (
   </PageShell>
 ));
 
-Hal23.displayName = "Hal23";
-export default Hal23;
+Hal21.displayName = "Hal21";
+export default Hal21;

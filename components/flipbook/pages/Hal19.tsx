@@ -33,8 +33,8 @@ const journey = [
   { Icon: Heart, label: "E. Manfaat" },
 ];
 
-const Hal19 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={19}>
+const Hal17 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={17}>
     <p className="font-body text-xs tracking-widest text-amber/60 uppercase mb-3 @sm:mb-4">
       E. Manfaat Energi Terbarukan — 02
     </p>
@@ -101,6 +101,6 @@ const Hal19 = forwardRef<HTMLDivElement>((_, ref) => (
     </div>
   </PageShell>
 ));
-Hal19.displayName = "Hal19";
+Hal17.displayName = "Hal17";
 
-export default Hal19;
+export default Hal17;

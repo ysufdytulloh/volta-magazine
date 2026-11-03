@@ -4,7 +4,7 @@ import BodyText from "../BodyText";
 import NoteBox from "../NoteBox";
 import PageImage from "../PageImage";
 
-const Hal08 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal08 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={8}>
     <PageImage caption="Foto: panel surya" src="/photos/hal08-suryapanel.jpg" />
 
@@ -16,8 +16,8 @@ const Hal08 = forwardRef<HTMLDivElement>((_, ref) =>
     </div>
 
     <NoteBox label="Tentang Sumber Terbarukan" tone="amber">
-      Sumber energi terbarukan tidak akan habis meski terus digunakan — mulai
-      dari panas bumi, angin, bioenergi, sinar matahari, sampai aliran air dan
+      Sumber energi terbarukan tidak akan habis meski terus digunakan mulai dari
+      panas bumi, angin, bioenergi, sinar matahari, sampai aliran air dan
       perbedaan suhu lapisan laut. Sifat inilah yang membuatnya disebut juga
       energi alternatif: pengganti bahan bakar konvensional tanpa efek samping
       yang merugikan. Empat yang paling umum dimanfaatkan akan kita bahas satu
@@ -30,7 +30,7 @@ const Hal08 = forwardRef<HTMLDivElement>((_, ref) =>
 
     <div className="grid grid-cols-1 @sm:grid-cols-2 gap-4 @sm:gap-6">
       <BodyText dropCap tone="amber">
-        Energi surya merupakan sumber energi utama di muka bumi — mulai dari
+        Energi surya merupakan sumber energi utama di muka bumi mulai dari
         tumbuhan yang berfotosintesis memakai sinar matahari, sampai
         penggunaannya sebagai sumber listrik. Teknologi pengubahnya disebut sel
         surya atau fotovoltaik, komponen dengan dua terminal yang mengubah
@@ -52,7 +52,7 @@ const Hal08 = forwardRef<HTMLDivElement>((_, ref) =>
       </NoteBox>
     </div>
   </PageShell>
-);
+));
 Hal08.displayName = "Hal08";
 
 export default Hal08;

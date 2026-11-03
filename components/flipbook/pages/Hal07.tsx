@@ -6,16 +6,16 @@ import { Sun, Wind, Droplets, Flame, Mountain, Atom } from "lucide-react";
 const renewable = [
   { icon: Sun, label: "Matahari" },
   { icon: Wind, label: "Angin" },
-  { icon: Droplets, label: "Air & ombak" }
+  { icon: Droplets, label: "Air & ombak" },
 ];
 
 const nonRenewable = [
   { icon: Flame, label: "Minyak bumi & gas alam" },
   { icon: Mountain, label: "Batu bara" },
-  { icon: Atom, label: "Nuklir" }
+  { icon: Atom, label: "Nuklir" },
 ];
 
-const Hal07 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal07 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={7}>
     <p className="font-body text-xs tracking-widest text-koral/60 uppercase mb-3 @sm:mb-4 ">
       C. Sumber Energi — 02
@@ -37,7 +37,7 @@ const Hal07 = forwardRef<HTMLDivElement>((_, ref) =>
           Terus tersedia, tidak akan habis
         </p>
         <div className="space-y-2.5 @sm:space-y-3">
-          {renewable.map(({ icon: Icon, label }, i) =>
+          {renewable.map(({ icon: Icon, label }, i) => (
             <div key={i} className="flex items-center gap-2">
               <Icon
                 size={14}
@@ -48,7 +48,7 @@ const Hal07 = forwardRef<HTMLDivElement>((_, ref) =>
                 {label}
               </span>
             </div>
-          )}
+          ))}
         </div>
       </div>
       <div className="bg-charcoal px-4 @sm:px-6 py-5 @sm:py-7">
@@ -59,7 +59,7 @@ const Hal07 = forwardRef<HTMLDivElement>((_, ref) =>
           Terbentuk jutaan tahun, jumlahnya terbatas
         </p>
         <div className="space-y-2.5 @sm:space-y-3">
-          {nonRenewable.map(({ icon: Icon, label }, i) =>
+          {nonRenewable.map(({ icon: Icon, label }, i) => (
             <div key={i} className="flex items-center gap-2">
               <Icon
                 size={14}
@@ -70,7 +70,7 @@ const Hal07 = forwardRef<HTMLDivElement>((_, ref) =>
                 {label}
               </span>
             </div>
-          )}
+          ))}
         </div>
       </div>
 
@@ -83,7 +83,7 @@ const Hal07 = forwardRef<HTMLDivElement>((_, ref) =>
 
     <div className="mt-4 @sm:mt-6 space-y-3 @sm:space-y-4">
       <NoteBox label="Tahukah Kamu">
-        Matahari adalah sumber energi terbesar di bumi — sekaligus pusat tata
+        Matahari adalah sumber energi terbesar di bumi sekaligus pusat tata
         surya yang dikelilingi delapan planet, termasuk bumi tempat kita
         berdiri.
       </NoteBox>
@@ -94,7 +94,7 @@ const Hal07 = forwardRef<HTMLDivElement>((_, ref) =>
       </NoteBox>
     </div>
   </PageShell>
-);
+));
 Hal07.displayName = "Hal07";
 
 export default Hal07;

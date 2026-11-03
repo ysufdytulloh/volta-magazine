@@ -32,8 +32,8 @@ const challenges = [
   },
 ];
 
-const Hal19 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={19}>
+const Hal17 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={17}>
     <p className="font-body text-xs tracking-widest text-koral/70 uppercase mb-3 @sm:mb-4">
       E. Energi Terbarukan — 02
     </p>
@@ -89,5 +89,5 @@ const Hal19 = forwardRef<HTMLDivElement>((_, ref) => (
   </PageShell>
 ));
 
-Hal19.displayName = "Hal19";
-export default Hal19;
+Hal17.displayName = "Hal17";
+export default Hal17;

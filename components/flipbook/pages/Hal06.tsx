@@ -4,7 +4,7 @@ import PullQuote from "../PullQuote";
 import BodyText from "../BodyText";
 import PageImage from "../PageImage";
 
-const Hal06 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal06 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={6}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="w-8 h-px bg-koral" />
@@ -26,8 +26,8 @@ const Hal06 = forwardRef<HTMLDivElement>((_, ref) =>
         <BodyText dropCap>
           Sumber energi adalah segala sesuatu yang bisa menghasilkan energi,
           baik secara langsung maupun lewat proses konversi. Ia ada di sekitar
-          kita dalam berbagai skala, kecil maupun besar — contohnya matahari,
-          air, dan minyak bumi.
+          kita dalam berbagai skala, kecil maupun besar contohnya matahari, air,
+          dan minyak bumi.
         </BodyText>
         <BodyText>
           Berdasarkan ketersediaannya, sumber energi terbagi dua: terbarukan
@@ -43,7 +43,7 @@ const Hal06 = forwardRef<HTMLDivElement>((_, ref) =>
       />
     </div>
   </PageShell>
-);
+));
 Hal06.displayName = "Hal06";
 
 export default Hal06;

@@ -139,9 +139,9 @@ export default function FlipReader() {
           <Hal12 />
           <Hal13 />
           <Hal14 />
-          <Hal15 />
+          {/* <Hal15 /> */}
           <Hal16 />
-          <Hal17 />
+          {/* <Hal17 /> */}
 
           {/* <Hal18 />
           <Hal19 /> */}

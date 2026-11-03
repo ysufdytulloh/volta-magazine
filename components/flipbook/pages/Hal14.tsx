@@ -4,7 +4,7 @@ import BodyText from "../BodyText";
 import GeothermalDiagram from "../GeothermalDiagram";
 import NoteBox from "../NoteBox";
 
-const Hal14 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal14 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={14}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="font-body text-xs tracking-widest text-amber uppercase">
@@ -20,12 +20,12 @@ const Hal14 = forwardRef<HTMLDivElement>((_, ref) =>
         Energi geotermal merupakan energi yang berasal dari sumber panas bumi.
         Jika diibaratkan air dingin dimasukkan ke dalam poros atau lubang batuan
         di bawah permukaan bumi, akan keluar uap air pada poros atau lubang
-        lainnya — uap inilah yang menggerakkan turbin dan menghasilkan listrik.
+        lainnya uap inilah yang menggerakkan turbin dan menghasilkan listrik.
       </BodyText>
       <BodyText>
         Salah satu pembangkit listrik tenaga geotermal di Indonesia adalah PLTP
-        Kamojang di Jawa Barat — bukti nyata bagaimana panas bumi negeri ini
-        sudah dimanfaatkan sejak lama.
+        Kamojang di Jawa Barat bukti nyata bagaimana panas bumi negeri ini sudah
+        dimanfaatkan sejak lama.
       </BodyText>
     </div>
 
@@ -38,12 +38,12 @@ const Hal14 = forwardRef<HTMLDivElement>((_, ref) =>
         Perhatikan rangkaian perubahannya: panas bumi memanaskan air jadi uap
         bertekanan tinggi (energi kinetik), uap itu memutar turbin (energi
         mekanik), lalu generator mengubahnya jadi listrik. Ini persis siklus
-        perubahan energi yang sudah kita bahas di Bagian B — cuma titik mulainya
+        perubahan energi yang sudah kita bahas di Bagian B cuma titik mulainya
         beda, dari panas bumi.
       </NoteBox>
     </div>
   </PageShell>
-);
+));
 Hal14.displayName = "Hal14";
 
 export default Hal14;

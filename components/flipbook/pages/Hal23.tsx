@@ -36,8 +36,8 @@ const impacts = [
   },
 ];
 
-const Hal21 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={21}>
+const Hal19 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={19}>
     <p className="font-body text-xs tracking-widest text-koral uppercase mb-3">
       E. Energi Terbarukan — 04
     </p>
@@ -84,5 +84,5 @@ const Hal21 = forwardRef<HTMLDivElement>((_, ref) => (
   </PageShell>
 ));
 
-Hal21.displayName = "Hal21";
-export default Hal21;
+Hal19.displayName = "Hal19";
+export default Hal19;

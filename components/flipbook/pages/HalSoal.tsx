@@ -13,7 +13,7 @@ const HalSoal = forwardRef<HTMLDivElement, HalSoalProps>(
     const qrReady = /^https?:\/\/\S+$/i.test(soalUrl);
 
     return (
-      <PageShell ref={ref} pageNumber={27}>
+      <PageShell ref={ref} pageNumber={25}>
         <div className="flex h-full flex-col">
           {/* Section label */}
           <div className="flex items-center gap-3 mb-2 @sm:mb-3">
