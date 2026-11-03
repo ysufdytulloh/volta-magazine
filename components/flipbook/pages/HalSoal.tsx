@@ -8,7 +8,7 @@ type HalSoalProps = {
 };
 
 const HalSoal = forwardRef<HTMLDivElement, HalSoalProps>(
-  ({ url = "https://forms.gle/MivwrMY2s2AL1hAg9" }, ref) => {
+  ({ url = "https://forms.gle/oJGhMPkvMxDjDYo37" }, ref) => {
     const soalUrl = url.trim();
     const qrReady = /^https?:\/\/\S+$/i.test(soalUrl);
 
