@@ -5,8 +5,8 @@ import PageImage from "../PageImage";
 import PullQuote from "../PullQuote";
 import NoteBox from "../NoteBox";
 
-const Hal27 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={27}>
+const Hal25 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={25}>
     <p className="font-body text-xs tracking-widest text-koral uppercase mb-3">
       F. Strategi Pengembangan Energi — 03
     </p>
@@ -82,5 +82,5 @@ const Hal27 = forwardRef<HTMLDivElement>((_, ref) => (
   </PageShell>
 ));
 
-Hal27.displayName = "Hal27";
-export default Hal27;
+Hal25.displayName = "Hal25";
+export default Hal25;

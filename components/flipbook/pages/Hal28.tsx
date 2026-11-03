@@ -29,8 +29,8 @@ const transformations = [
   },
 ];
 
-const Hal28 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={28}>
+const Hal26 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={26}>
     <p className="font-body text-xs tracking-widest text-koral uppercase mb-3">
       G. Hukum Kekekalan Energi
     </p>
@@ -89,5 +89,5 @@ const Hal28 = forwardRef<HTMLDivElement>((_, ref) => (
   </PageShell>
 ));
 
-Hal28.displayName = "Hal28";
-export default Hal28;
+Hal26.displayName = "Hal26";
+export default Hal26;

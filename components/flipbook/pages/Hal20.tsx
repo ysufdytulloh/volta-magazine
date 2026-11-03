@@ -5,8 +5,8 @@ import BodyText from "../BodyText";
 import PageImage from "../PageImage";
 import NoteBox from "../NoteBox";
 
-const Hal20 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={20}>
+const Hal18 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={18}>
     <div className="flex items-center gap-3 mb-2 @sm:mb-3">
       <span className="w-8 h-px bg-koral" />
       <span className="font-body text-xs tracking-widest text-koral uppercase">
@@ -56,5 +56,5 @@ const Hal20 = forwardRef<HTMLDivElement>((_, ref) => (
   </PageShell>
 ));
 
-Hal20.displayName = "Hal20";
-export default Hal20;
+Hal18.displayName = "Hal18";
+export default Hal18;
