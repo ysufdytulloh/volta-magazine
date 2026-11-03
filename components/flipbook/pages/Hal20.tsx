@@ -1,84 +1,60 @@
 import { forwardRef } from "react";
 import PageShell from "../PageShell";
-import TrendChart from "../TrendChart";
+import PullQuote from "../PullQuote";
+import BodyText from "../BodyText";
+import PageImage from "../PageImage";
 import NoteBox from "../NoteBox";
 
-const data = [
-  { label: "2009", value: 50 },
-  { label: "2010", value: 52 },
-  { label: "2011", value: 50 },
-  { label: "2012", value: 43 },
-  { label: "2013", value: 44 },
-  { label: "2014", value: 42 },
-  { label: "2015", value: 43 },
-  { label: "2016", value: 44 },
-  { label: "2017", value: 43 },
-  { label: "2018", value: 40 }
-];
-
-const Hal20 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal20 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={20}>
-    <p className="font-body text-xs tracking-widest text-navy/60 uppercase mb-3 @sm:mb-4">
-      D.2 Sumber Energi Tidak Dapat Diperbaharui — 05
-    </p>
-    <h2 className="font-display text-xl @sm:text-2xl text-charcoal mb-1">
-      Rasio Ekspor Gas Bumi terhadap Produksi
+    <div className="flex items-center gap-3 mb-2 @sm:mb-3">
+      <span className="w-8 h-px bg-koral" />
+      <span className="font-body text-xs tracking-widest text-koral uppercase">
+        E. Energi Terbarukan
+      </span>
+    </div>
+
+    <h2 className="font-display text-2xl @sm:text-4xl text-charcoal leading-tight mb-3 @sm:mb-4">
+      Mengapa Energi Terbarukan Penting?
     </h2>
-    <p className="font-body text-xs @sm:text-sm text-charcoal/50 mb-4 @sm:mb-6">
-      2009–2018
-    </p>
 
-    <TrendChart
-      data={data}
-      color="amber"
-      source="Data produksi dan ekspor gas bumi nasional, Bahan Ajar Energi dan Perubahannya"
-    />
+    <div className="h-px w-full mb-4 @sm:mb-6 bg-gradient-to-r from-koral to-transparent" />
 
-    <div className="flex justify-center gap-6 @sm:gap-10 mt-4 @sm:mt-5">
-      <div className="text-center">
-        <p className="font-display text-2xl @sm:text-3xl text-amber">52%</p>
-        <p className="font-body text-[10px] @sm:text-xs text-charcoal/50">
-          Tertinggi (2010)
-        </p>
-      </div>
-      <div className="text-center">
-        <p className="font-display text-2xl @sm:text-3xl text-navy">40%</p>
-        <p className="font-body text-[10px] @sm:text-xs text-charcoal/50">
-          Terendah (2018)
-        </p>
-      </div>
-    </div>
+    <div className="space-y-3 @sm:space-y-5">
+      <PullQuote>
+        Masa depan energi tidak hanya ditentukan oleh seberapa banyak energi
+        yang kita gunakan, tetapi juga dari mana energi itu berasal.
+      </PullQuote>
 
-    <div className="mt-4 @sm:mt-5 rounded-xl border border-charcoal/10 px-4 @sm:px-5 py-3 @sm:py-4 grid grid-cols-2 gap-3">
-      <div className="text-center border-r border-charcoal/10">
-        <p className="font-body text-[9px] @sm:text-[10px] tracking-widest text-charcoal/40 uppercase mb-1">
-          Minyak Bumi
-        </p>
-        <p className="font-display text-base @sm:text-lg text-amber">~35%</p>
-        <p className="font-body text-[9px] @sm:text-[10px] text-charcoal/50">
-          Relatif stabil
-        </p>
-      </div>
-      <div className="text-center">
-        <p className="font-body text-[9px] @sm:text-[10px] tracking-widest text-charcoal/40 uppercase mb-1">
-          Gas Bumi
-        </p>
-        <p className="font-display text-base @sm:text-lg text-amber">50%→40%</p>
-        <p className="font-body text-[9px] @sm:text-[10px] text-charcoal/50">
-          Terus menurun
-        </p>
-      </div>
-    </div>
+      <BodyText dropCap>
+        Sebagian besar kebutuhan energi manusia masih bergantung pada bahan
+        bakar fosil. Penggunaan bahan bakar fosil secara berlebihan dapat
+        menghasilkan emisi gas rumah kaca yang berkontribusi terhadap pemanasan
+        global. Oleh karena itu, energi terbarukan dikembangkan sebagai salah
+        satu alternatif untuk mengurangi ketergantungan terhadap sumber energi
+        tersebut.
+      </BodyText>
 
-    <div className="mt-4 @sm:mt-5">
-      <NoteBox label="Membaca Tren" tone="navy">
-        Berbeda dari minyak bumi yang ketergantungan impornya relatif stabil,
-        rasio ekspor gas bumi justru terus mengecil. Tandanya, semakin banyak
-        gas bumi yang ditahan untuk kebutuhan dalam negeri.
+      <BodyText>
+        Energi terbarukan memanfaatkan sumber daya alam yang dapat diperbarui
+        melalui proses alam, seperti sinar matahari, angin, air, dan panas bumi.
+        Pemanfaatannya menjadi salah satu langkah penting dalam membangun sistem
+        energi yang lebih berkelanjutan.
+      </BodyText>
+
+      <PageImage
+        caption="Panel surya sebagai salah satu pemanfaatan energi terbarukan"
+        src="/photos/hal20-energiterbarukan.jpg"
+      />
+
+      <NoteBox label="Mengapa Penting?" tone="navy">
+        Energi terbarukan dapat membantu mengurangi pencemaran udara, menekan
+        emisi gas rumah kaca, memanfaatkan sumber daya lokal, membuka lapangan
+        pekerjaan, dan mendukung ketahanan energi.
       </NoteBox>
     </div>
   </PageShell>
-);
-Hal20.displayName = "Hal20";
+));
 
+Hal20.displayName = "Hal20";
 export default Hal20;

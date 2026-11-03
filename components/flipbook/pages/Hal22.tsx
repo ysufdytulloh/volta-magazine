@@ -1,64 +1,85 @@
 import { forwardRef } from "react";
 import PageShell from "../PageShell";
 import BodyText from "../BodyText";
-import StackedBar from "../StackedBar";
-import GrowthIndicator from "../GrowthIndicator";
-import { Zap, Factory } from "lucide-react";
+import PageImage from "../PageImage";
+import PullQuote from "../PullQuote";
 
-const Hal22 = forwardRef<HTMLDivElement>((_, ref) =>
+const benefits = [
+  {
+    number: "01",
+    title: "Lingkungan Lebih Bersih",
+    desc: "Membantu mengurangi pencemaran udara dan ketergantungan pada bahan bakar fosil.",
+  },
+  {
+    number: "02",
+    title: "Emisi Lebih Rendah",
+    desc: "Membantu menekan emisi gas rumah kaca dari penggunaan energi.",
+  },
+  {
+    number: "03",
+    title: "Potensi Lokal",
+    desc: "Memanfaatkan sumber daya alam yang tersedia di setiap wilayah.",
+  },
+  {
+    number: "04",
+    title: "Peluang Ekonomi",
+    desc: "Membuka lapangan pekerjaan dan meningkatkan pendapatan masyarakat.",
+  },
+];
+
+const Hal22 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={22}>
-    <div className="flex items-center gap-3 mb-2 @sm:mb-3">
-      <span className="w-8 h-px bg-navy" />
-      <span className="font-body text-xs tracking-widest text-navy uppercase">
-        D.2 Sumber Energi Tidak Dapat Diperbaharui — 07
-      </span>
-    </div>
-    <h2 className="font-display text-2xl @sm:text-4xl text-charcoal leading-tight mb-3 @sm:mb-4">
-      Batubara
+    <p className="font-body text-xs tracking-widest text-koral uppercase mb-3">
+      E. Energi Terbarukan — 03
+    </p>
+
+    <h2 className="font-display text-2xl @sm:text-4xl text-charcoal leading-tight mb-3">
+      Dampak Positif bagi Lingkungan dan Masyarakat
     </h2>
 
-    <div className="grid grid-cols-1 @sm:grid-cols-2 gap-4 @sm:gap-6">
-      <BodyText dropCap tone="navy">
-        Produksi batubara Indonesia diperkirakan akan terus meningkat, terutama
-        untuk memenuhi kebutuhan dalam negeri (pembangkit listrik dan industri)
-        sekaligus permintaan luar negeri lewat ekspor.
-      </BodyText>
-      <BodyText>
-        Perkembangan produksi periode 2009-2018 mengalami peningkatan cukup
-        besar, dengan capaian produksi pada 2018 sebesar 557 juta ton.
+    <div className="h-px w-full mb-4 @sm:mb-6 bg-gradient-to-r from-koral to-transparent" />
+
+    {/* <PageImage
+      caption="Pemanfaatan energi surya untuk mendukung kebutuhan listrik"
+      src="/photos/hal22-energi-matahari-angin.jpg"
+    /> */}
+
+    <div className="mt-4 @sm:mt-5">
+      <BodyText dropCap>
+        Penggunaan energi terbarukan dapat memberikan manfaat yang dirasakan
+        oleh lingkungan maupun masyarakat. Selain membantu mengurangi
+        ketergantungan terhadap bahan bakar fosil, pengembangan energi ini juga
+        dapat mendorong pertumbuhan ekonomi dan pemanfaatan sumber daya lokal.
       </BodyText>
     </div>
 
-    <div className="flex justify-center gap-6 @sm:gap-8 mt-3 @sm:mt-4">
-      <div className="flex items-center gap-2">
-        <Zap size={16} className="text-navy" strokeWidth={1.75} />
-        <span className="font-body text-xs @sm:text-sm text-charcoal/70">
-          Pembangkit Listrik
-        </span>
-      </div>
-      <div className="flex items-center gap-2">
-        <Factory size={16} className="text-navy" strokeWidth={1.75} />
-        <span className="font-body text-xs @sm:text-sm text-charcoal/70">
-          Industri
-        </span>
-      </div>
+    <div className="grid grid-cols-2 gap-3 @sm:gap-4 mt-4 @sm:mt-6">
+      {benefits.map((item) => (
+        <div
+          key={item.number}
+          className="rounded-xl border border-charcoal/10 p-3 @sm:p-4"
+        >
+          <span className="font-display text-2xl text-koral">
+            {item.number}
+          </span>
+          <h3 className="font-display text-sm @sm:text-base text-charcoal mt-2">
+            {item.title}
+          </h3>
+          <p className="font-body text-[10px] @sm:text-xs leading-relaxed text-charcoal/60 mt-2">
+            {item.desc}
+          </p>
+        </div>
+      ))}
     </div>
 
-    <div className="grid grid-cols-1 @sm:grid-cols-2 gap-3 @sm:gap-4 mt-4 @sm:mt-6">
-      <GrowthIndicator caption="Tren produksi batubara nasional, 2009 → 2018" />
-      <div className="rounded-xl border border-charcoal/10 px-4 @sm:px-6 py-4 @sm:py-5">
-        <StackedBar
-          total="557 Juta Ton"
-          totalLabel="Total Produksi 2018"
-          segments={[
-            { label: "Ekspor", percentage: 63, bg: "bg-amber" },
-            { label: "Domestik", percentage: 37, bg: "bg-navy" }
-          ]}
-        />
-      </div>
+    <div className="mt-4 @sm:mt-5">
+      <PullQuote>
+        Energi terbarukan bukan hanya tentang menghasilkan listrik, tetapi juga
+        tentang menciptakan manfaat bagi kehidupan.
+      </PullQuote>
     </div>
   </PageShell>
-);
-Hal22.displayName = "Hal22";
+));
 
+Hal22.displayName = "Hal22";
 export default Hal22;

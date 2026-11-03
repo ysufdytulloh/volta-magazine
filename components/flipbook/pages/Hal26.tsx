@@ -1,106 +1,88 @@
 import { forwardRef } from "react";
 import PageShell from "../PageShell";
 import BodyText from "../BodyText";
+import PullQuote from "../PullQuote";
 import NoteBox from "../NoteBox";
-import {
-  Leaf,
-  Briefcase,
-  Zap,
-  RefreshCw,
-  Sun,
-  Factory,
-  Heart,
-} from "lucide-react";
+import PageImage from "../PageImage";
 
-const manfaat = [
-  {
-    icon: Leaf,
-    label: "Pentingnya menjaga sumber daya alam untuk keberlanjutan",
-  },
-  {
-    icon: Briefcase,
-    label:
-      "Energi terbarukan berdampak positif pada pekerjaan dan pertumbuhan ekonomi",
-  },
-];
-
-const journey = [
-  { Icon: Zap, label: "A. Energi" },
-  { Icon: RefreshCw, label: "B. Perubahan" },
-  { Icon: Sun, label: "C. Sumber" },
-  { Icon: Leaf, label: "D.1 Terbarukan" },
-  { Icon: Factory, label: "D.2 Tak Terbarukan" },
-  { Icon: Heart, label: "E. Manfaat" },
-];
-
-const Hal19 = forwardRef<HTMLDivElement>((_, ref) => (
-  <PageShell ref={ref} pageNumber={19}>
-    <p className="font-body text-xs tracking-widest text-amber/60 uppercase mb-3 @sm:mb-4">
-      E. Manfaat Energi Terbarukan — 02
+const Hal26 = forwardRef<HTMLDivElement>((_, ref) => (
+  <PageShell ref={ref} pageNumber={26}>
+    <p className="font-body text-xs tracking-widest text-koral uppercase mb-3">
+      F. Strategi Pengembangan Energi — 02
     </p>
-    <h2 className="font-display text-xl @sm:text-2xl text-charcoal mb-3 @sm:mb-4">
-      Keberlanjutan & Ekonomi
+
+    <h2 className="font-display text-2xl @sm:text-4xl text-charcoal leading-tight mb-3">
+      Diversifikasi dan Penyimpanan Energi
     </h2>
 
-    <BodyText>
-      Selain soal emisi, energi terbarukan juga punya 2 manfaat lain yang sering
-      kelewat dibahas.
+    <div className="h-px w-full mb-4 @sm:mb-6 bg-gradient-to-r from-koral to-transparent" />
+
+    <BodyText dropCap>
+      Diversifikasi energi merupakan upaya menggunakan beberapa jenis sumber
+      energi agar kebutuhan tidak hanya bergantung pada satu sumber. Hal ini
+      penting karena produksi energi surya, angin, dan air dapat berubah
+      mengikuti kondisi alam.
     </BodyText>
 
-    <div className="space-y-2 @sm:space-y-2.5 mt-3 @sm:mt-4">
-      <p className="font-body text-[10px] tracking-widest text-charcoal/40 uppercase mb-1">
-        Manfaat 2 &amp; 3
-      </p>
-      {manfaat.map(({ icon: Icon, label }, i) => (
-        <div key={i} className="flex items-center gap-2.5">
-          <Icon size={15} className="text-amber shrink-0" strokeWidth={1.75} />
-          <span className="font-body text-xs @sm:text-sm text-charcoal/80">
-            {label}
-          </span>
-        </div>
-      ))}
-    </div>
-
-    <div className="mt-3 @sm:mt-4 grid grid-cols-1 @sm:grid-cols-2 gap-3">
-      <NoteBox label="Kenapa Keberlanjutan SDA Penting" tone="amber">
-        Berbeda dari minyak bumi atau batubara yang akan habis suatu saat,
-        surya, angin, air, dan geotermal terus tersedia — menjaganya berarti
-        memastikan generasi berikutnya tetap punya akses energi.
-      </NoteBox>
-      <NoteBox label="Kenapa Berdampak ke Ekonomi" tone="amber">
-        Membangun dan merawat instalasi seperti PLTS, PLTA, atau PLTP butuh
-        tenaga kerja dalam jumlah besar — dari konstruksi sampai pemeliharaan
-        jangka panjang.
-      </NoteBox>
-    </div>
-
-    <div className="mt-4 @sm:mt-5 rounded-xl border border-charcoal/10 px-3 @sm:px-5 py-4 @sm:py-5">
-      <p className="font-body text-[10px] tracking-widest text-charcoal/40 uppercase text-center mb-3">
-        Perjalanan Kita Sejauh Ini
-      </p>
-      <div className="grid grid-cols-3 @sm:grid-cols-6 gap-2 @sm:gap-3">
-        {journey.map(({ Icon, label }, i) => (
-          <div key={i} className="text-center">
-            <div className="w-9 h-9 @sm:w-10 @sm:h-10 rounded-full bg-charcoal/5 flex items-center justify-center mx-auto mb-1.5">
-              <Icon size={16} className="text-charcoal/60" strokeWidth={1.75} />
-            </div>
-            <p className="font-body text-[8px] @sm:text-[10px] text-charcoal/50 leading-tight">
-              {label}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
+    <PullQuote>
+      Menggabungkan beberapa sumber energi dapat membantu memenuhi kebutuhan
+      listrik secara lebih stabil.
+    </PullQuote>
 
     <div className="mt-4 @sm:mt-5">
-      <NoteBox label="Menutup Bagian D & E" tone="amber">
-        Dari empat sumber terbarukan, tiga sumber fosil, sampai manfaat-manfaat
-        ini — satu kesimpulan yang sama terus muncul: transisi energi bukan
-        pilihan, tapi kebutuhan.
+      <h3 className="font-display text-lg @sm:text-xl text-charcoal mb-3">
+        Contoh Diversifikasi Energi
+      </h3>
+
+      <div className="grid grid-cols-2 gap-3">
+        <div className="rounded-xl bg-amber/10 p-3 @sm:p-4 text-center">
+          <span className="font-display text-3xl text-amber">01</span>
+          <p className="font-display text-sm text-charcoal mt-2">Panel Surya</p>
+          <p className="font-body text-[10px] text-charcoal/60 mt-1">
+            Memanfaatkan cahaya matahari.
+          </p>
+        </div>
+        <div className="rounded-xl bg-navy/[0.06] p-3 @sm:p-4 text-center">
+          <span className="font-display text-3xl text-navy">02</span>
+          <p className="font-display text-sm text-charcoal mt-2">Mikrohidro</p>
+          <p className="font-body text-[10px] text-charcoal/60 mt-1">
+            Memanfaatkan aliran sungai.
+          </p>
+        </div>
+      </div>
+
+      <p className="font-body text-xs text-charcoal/60 leading-relaxed mt-3">
+        Desa yang memiliki sinar matahari tinggi dan aliran sungai deras dapat
+        mengkaji penggunaan panel surya dan mikrohidro secara bersamaan.
+      </p>
+    </div>
+
+    <div className="mt-5 @sm:mt-6">
+      <h3 className="font-display text-lg @sm:text-xl text-charcoal mb-3">
+        Teknologi Penyimpanan Energi
+      </h3>
+
+      <PageImage
+        caption="Baterai sebagai teknologi penyimpanan energi listrik"
+        src="/photos/hal26-penyimpanan-energi.jpg"
+      />
+
+      <BodyText>
+        Baterai dapat menyimpan energi listrik ketika sumber energi tersedia,
+        kemudian melepaskannya kembali saat dibutuhkan. Sebagian listrik dari
+        panel surya pada siang hari dapat disimpan untuk digunakan pada malam
+        hari.
+      </BodyText>
+    </div>
+
+    <div className="mt-4">
+      <NoteBox label="Alur Sederhana" tone="navy">
+        Panel surya menghasilkan listrik → listrik digunakan atau disimpan dalam
+        baterai → energi tersimpan digunakan saat matahari tidak tersedia.
       </NoteBox>
     </div>
   </PageShell>
 ));
-Hal19.displayName = "Hal19";
 
-export default Hal19;
+Hal26.displayName = "Hal26";
+export default Hal26;

@@ -1,61 +1,78 @@
 import { forwardRef } from "react";
 import PageShell from "../PageShell";
-import NoteBox from "../NoteBox";
+import BodyText from "../BodyText";
 import PageImage from "../PageImage";
-import FossilFormationDiagram from "../FossilFormationDiagram";
+import PullQuote from "../PullQuote";
+import NoteBox from "../NoteBox";
 
-const summary = [
-  { name: "Minyak Bumi", stat: "~35%", desc: "Ketergantungan impor" },
-  { name: "Gas Bumi", stat: "50%→40%", desc: "Rasio ekspor menurun" },
-  { name: "Batubara", stat: "63%", desc: "Porsi ekspor dari produksi" }
-];
-
-const Hal24 = forwardRef<HTMLDivElement>((_, ref) =>
+const Hal24 = forwardRef<HTMLDivElement>((_, ref) => (
   <PageShell ref={ref} pageNumber={24}>
-    <p className="font-body text-xs tracking-widest text-navy/60 uppercase mb-3 @sm:mb-4">
-      D.2 Sumber Energi Tidak Dapat Diperbaharui — 09
+    <p className="font-body text-xs tracking-widest text-koral uppercase mb-3">
+      E. Energi Terbarukan — 05
     </p>
-    <h2 className="font-display text-xl @sm:text-2xl text-charcoal mb-3 @sm:mb-4">
-      Menutup Bagian D.2
+
+    <h2 className="font-display text-2xl @sm:text-4xl text-charcoal leading-tight mb-3">
+      Ketika Ekonomi Berhadapan dengan Lingkungan
     </h2>
 
+    <div className="h-px w-full mb-4 @sm:mb-6 bg-gradient-to-r from-koral to-transparent" />
+
+    <PullQuote>
+      Tidak semua pilihan yang menguntungkan secara ekonomi selalu memberikan
+      dampak baik bagi lingkungan.
+    </PullQuote>
+
+    <div className="mt-4 @sm:mt-5">
+      <BodyText dropCap>
+        Salah satu contoh konflik antara kepentingan ekonomi dan lingkungan
+        dapat ditemukan pada pemanfaatan kelapa sawit sebagai bahan baku
+        biodiesel. Biodiesel merupakan bahan bakar yang dapat dibuat dari minyak
+        nabati, salah satunya minyak kelapa sawit.
+      </BodyText>
+    </div>
+
     <PageImage
-      caption="Foto: tambang batubara"
-      src="/photos/hal24-tambangbatubara.jpg"
+      caption="Perkebunan kelapa sawit sebagai sumber bahan baku biodiesel"
+      src="/photos/hal24-kelapa-sawit.jpg"
     />
 
-    <div className="grid grid-cols-3 gap-2.5 @sm:gap-3 mt-4 @sm:mt-5">
-      {summary.map((s, i) =>
-        <div
-          key={i}
-          className="rounded-xl border border-charcoal/10 px-2 @sm:px-3 py-3 @sm:py-4 text-center"
-        >
-          <p className="font-body text-[9px] @sm:text-[10px] text-charcoal/50 uppercase tracking-wide mb-1">
-            {s.name}
-          </p>
-          <p className="font-display text-base @sm:text-lg text-navy">
-            {s.stat}
-          </p>
-          <p className="font-body text-[9px] @sm:text-[10px] text-charcoal/50 mt-0.5">
-            {s.desc}
-          </p>
-        </div>
-      )}
+    <div className="grid grid-cols-2 gap-3 @sm:gap-4 mt-4 @sm:mt-5">
+      <div className="rounded-xl border border-emerald-700/20 p-3 @sm:p-4">
+        <p className="font-body text-[10px] tracking-widest uppercase text-emerald-700">
+          Kepentingan Ekonomi
+        </p>
+        <h3 className="font-display text-base @sm:text-lg text-charcoal mt-2">
+          Peluang
+        </h3>
+        <ul className="font-body text-xs leading-relaxed text-charcoal/65 mt-2 space-y-2">
+          <li>• Meningkatkan pendapatan petani.</li>
+          <li>• Membuka lapangan pekerjaan.</li>
+        </ul>
+      </div>
+
+      <div className="rounded-xl border border-koral/30 p-3 @sm:p-4">
+        <p className="font-body text-[10px] tracking-widest uppercase text-koral">
+          Kepentingan Lingkungan
+        </p>
+        <h3 className="font-display text-base @sm:text-lg text-charcoal mt-2">
+          Risiko
+        </h3>
+        <ul className="font-body text-xs leading-relaxed text-charcoal/65 mt-2 space-y-2">
+          <li>• Hilangnya habitat satwa.</li>
+          <li>• Menurunnya keanekaragaman hayati.</li>
+          <li>• Berkurangnya kemampuan hutan menyerap karbon.</li>
+        </ul>
+      </div>
     </div>
 
-    <div className="mt-4 @sm:mt-5">
-      <FossilFormationDiagram />
-    </div>
-
-    <div className="mt-4 @sm:mt-5">
-      <NoteBox label="Satu Pola yang Sama" tone="navy">
-        Minyak bumi, gas bumi, dan batubara — ketiganya berbagi satu pola yang
-        sama: terbentuk lewat proses alam yang memakan waktu jutaan tahun,
-        sehingga jumlahnya tidak bisa diperbarui secepat manusia menggunakannya.
+    <div className="mt-4">
+      <NoteBox label="Pelajaran dari Kasus" tone="navy">
+        Pengembangan energi perlu memperhatikan dampak ekonomi sekaligus menjaga
+        kelestarian ekosistem.
       </NoteBox>
     </div>
   </PageShell>
-);
-Hal24.displayName = "Hal24";
+));
 
+Hal24.displayName = "Hal24";
 export default Hal24;

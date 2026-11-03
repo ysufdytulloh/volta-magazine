@@ -34,6 +34,7 @@ import Hal27 from "./pages/Hal27";
 import Hal28 from "./pages/Hal28";
 import Hal29 from "./pages/Hal29";
 import HalSoal from "./pages/HalSoal";
+import Hal30 from "./pages/Hal30";
 
 const HTMLFlipBook = dynamic(() => import("react-pageflip"), {
   ssr: false,
@@ -143,22 +144,22 @@ export default function FlipReader() {
           <Hal17 />
 
           {/* <Hal18 />
-          <Hal19 />
+          <Hal19 /> */}
           <Hal20 />
           <Hal21 />
           <Hal22 />
           <Hal23 />
-          <Hal24 /> */}
-
+          <Hal24 />
           <Hal25 />
           <Hal26 />
-
-          {/* <Hal27 />
-          <Hal28 /> */}
+          <Hal27 />
+          <Hal28 />
 
           <HalSoal />
 
           <Hal29 />
+          <Hal30 />
+
           <BackCoverPage />
         </HTMLFlipBook>
       </div>
